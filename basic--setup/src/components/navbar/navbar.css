@@ -1,0 +1,15 @@
+a.active{
+  background-color: white;
+ 
+  padding: 5px 15px;
+  border: 1px solid skyblue; 
+  border-radius: 5px;
+  cursor:default;
+}
+
+a:hover{
+  color: darkgray;
+}
+a.active:hover{
+  color: black;
+}
