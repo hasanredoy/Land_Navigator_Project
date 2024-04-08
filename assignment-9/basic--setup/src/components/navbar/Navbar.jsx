@@ -2,7 +2,7 @@ import {Link, NavLink } from "react-router-dom"
 import './navbar.css'
 const Navbar = () => {
 
-  const navBarLinks = < div className=" flex gap-6 items-center font-bold text-lg">
+  const navBarLinks = < div className=" flex flex-col lg:flex-row gap-3 lg:gap-6 items-center font-bold text-lg">
     <NavLink className={' '}  to={'/'}>Home</NavLink> 
     
     <NavLink  to={'/update-profile'}>Update Profile</NavLink> 
@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
           >
            {navBarLinks}
           </ul>

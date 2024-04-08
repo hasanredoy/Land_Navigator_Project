@@ -9,8 +9,10 @@
     "area": "100 acres",
     "location": "Rural Village, Bangladesh",
     "facilities": ["irrigation system", "storage shed", "fencing"],
-    "image": "agricultural_land_image.jpg",
-    "view_property": "View Property"
+    "image": "https://i.postimg.cc/XNs9CKv9/banner.jpg",
+    "view_property": "View Property",
+    "slide1":"https://i.postimg.cc/KYF8vVtF/slide1.jpg",
+    "slide2":"https://i.postimg.cc/hj2L0VKz/slide2.jpg"
   },
   {
     "id": 2,
@@ -22,8 +24,11 @@
     "area": "200 acres",
     "location": "Montana, USA",
     "facilities": ["barn", "riding trails", "pond"],
-    "image": "ranch_image.jpg",
-    "view_property": "View Property"
+    "image": "https://i.postimg.cc/NFT1vS1T/slide2.jpg",
+    "view_property": "View Property",
+    
+    "slide1":"https://i.postimg.cc/1RpHTVMd/slide1.jpg",
+    "slide2":"https://i.postimg.cc/rwpNKnc6/banner-1.jpg"
   },
   {
     "id": 3,
@@ -35,21 +40,25 @@
     "area": "50 acres",
     "location": "Provence, France",
     "facilities": ["greenhouses", "farmhouse", "packing shed"],
-    "image": "farm_image.jpg",
-    "view_property": "View Property"
+    "image": "https://i.pinimg.com/originals/1c/7e/fd/1c7efd9bca0de498d988828de037cd59.jpg",
+    "view_property": "View Property",
+    "slide1":"https://i.postimg.cc/J4zpk4cd/slide-3.jpg",
+    "slide2":"https://i.postimg.cc/4N3YtnLM/slide-1.jpg"
   },
   {
     "id": 4,
-    "estate_title": "Award-Winning Vineyard",
-    "segment_name": "Vineyards",
-    "description": "Indulge in the art of winemaking with this prestigious 40-acre vineyard nestled in the heart of Napa Valley, California. Renowned for producing premium wine grapes, this award-winning vineyard offers a rare opportunity to enter the esteemed world of viticulture. Featuring a state-of-the-art winery, inviting tasting room, and temperature-controlled cellar, this vineyard estate promises an unparalleled wine country experience.",
+    "estate_title": "Award-Winning Plantations Estate",
+    "segment_name": "Plantations",
+    "description": "Experience the allure of plantation living with this exquisite 40-acre estate nestled in the heart of Napa Valley, California. Renowned for its lush landscape and premium agricultural yield, this award-winning property offers a rare opportunity to immerse yourself in the rich heritage of plantation life. Boasting meticulously maintained fields, charming estate homes, and state-of-the-art facilities, this plantation estate promises a serene and luxurious lifestyle amidst the beauty of wine country.",
     "price": "$2,500,000",
     "status": "sale",
     "area": "40 acres",
     "location": "Napa Valley, California",
-    "facilities": ["winery", "tasting room", "cellar"],
-    "image": "vineyard_image.jpg",
-    "view_property": "View Property"
+    "facilities": ["estate homes", "fields", "facilities"],
+    "image": "https://i.postimg.cc/pV0P8CnQ/banner.jpg",
+    "view_property": "View Property",
+    "slide1": "https://i.postimg.cc/XqD3bN01/slide-3.jpg",
+    "slide2": "https://i.postimg.cc/prV8SC2Y/slide-4.jpg"
   },
   {
     "id": 5,
@@ -61,8 +70,10 @@
     "area": "500 acres",
     "location": "Amazon Rainforest, Brazil",
     "facilities": ["hiking trails", "wildlife observation points", "camping areas"],
-    "image": "forest_image.jpg",
-    "view_property": "View Property"
+    "image": "https://i.postimg.cc/Pf8bDpBx/slide-1.jpg",
+    "view_property": "View Property",
+    "slide1":"https://i.postimg.cc/qvKtjSsH/slide-2.jpg",
+    "slide2":"https://i.postimg.cc/NFyGL2bv/slide-3.jpg"
   },
   {
     "id": 6,
@@ -74,7 +85,9 @@
     "area": "1000 acres",
     "location": "Darjeeling, India",
     "facilities": ["processing factory", "manager's residence", "tea gardens"],
-    "image": "plantation_image.jpg",
-    "view_property": "View Property"
+    "image": "https://i.postimg.cc/Dft4L7GP/slide-1.jpg",
+    "view_property": "View Property",
+    "slide1":"https://i.postimg.cc/J0mVCygQ/slide-2.jpg",
+    "slide2":"https://i.postimg.cc/XqvL54yb/slide-3.jpg"
   }
 ]
