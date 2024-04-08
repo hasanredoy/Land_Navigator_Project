@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Slider from "../../components/slider/Slider";
+import 'animate.css';
 
 const Home = () => {
   return (
@@ -7,16 +8,16 @@ const Home = () => {
       <section className=" flex flex-col lg:flex-row  gap-10">
         {/* text section ' */}
         <div className=" w-[95%] mx-auto lg:mx-0 lg:w-[40%] flex flex-col justify-center items-center min-h-[500px]">
-          <h1 className=" font-bold text-xl text-center lg:text-3xl  ">
-            <span className="text-transparent bg-gradient-to-r bg-clip-text from-sky-400 via-[#232af888] to-amber-300 text-2xl lg:text-4xl">
-              {" "}
-              Welcome To Land Navigator.
-            </span>
-            <br />
+          
+        <h2 className="text-transparent bg-gradient-to-r bg-clip-text from-sky-400 via-[#232af888] to-amber-300 text-2xl lg:text-4xl font-bold animate__animated animate__backInDown animate__delay-0.5s">
+             
+             Welcome To Land Navigator.
+           </h2>
+          <h3 className=" font-bold text-xl text-center lg:text-3xl  ">
             <div className=" my-3 lg:my-5"></div>
             <span className=" text-green-500">Let&apos;s</span> Navig🔎te You to
             You&apos;re Dream <span className=" text-green-700">Land</span>.
-          </h1>
+          </h3>
 
           <p className=" my-10 text-center">
             We&apos;re Land Navigator. We Will navigate You to You&apos;re dream
@@ -24,7 +25,7 @@ const Home = () => {
           </p>
 
           <Link>
-          <button className="bg-[#30336b] rounded-full px-5 text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">Let&apos;s Navigate 🔎</button>
+          <button className="bg-[#30336b] rounded-full px-5 text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 animate__animated animate__fadeInLeft ">Let&apos;s Navigate 🔎</button>
           </Link>
         </div>
         {/* slider section  */}

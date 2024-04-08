@@ -3,7 +3,7 @@ import Navbar from '../components/navbar/Navbar';
 const Layout = () => {
   return (
     <div>
-      <div className=' container mx-auto '>
+      <div className=' container mx-auto sticky top-0 z-50 '>
       <Navbar></Navbar>
       </div>
      

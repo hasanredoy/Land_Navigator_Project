@@ -1,5 +1,7 @@
 import {Link, NavLink } from "react-router-dom"
 import './navbar.css'
+import { FaUser } from "react-icons/fa6";
+
 const Navbar = () => {
 
   const navBarLinks = < div className=" flex flex-col lg:flex-row gap-3 lg:gap-6 items-center font-bold text-lg">
@@ -43,7 +45,10 @@ const Navbar = () => {
          {navBarLinks}
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end gap-5">
+      <div className="w-10 rounded-full">
+          <img  src='https://pluspng.com/img-png/png-user-icon-circled-user-icon-2240.png' />
+        </div>
       <button className=" bg-[#30336b] rounded-full px-5 text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">Log In</button>
       </div>
     </div>
