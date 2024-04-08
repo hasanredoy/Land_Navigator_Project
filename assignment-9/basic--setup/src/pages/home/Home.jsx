@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Slider from "../../components/slider/Slider";
 
 const Home = () => {
@@ -22,7 +23,9 @@ const Home = () => {
             agricultural land, Ranches, Farms, Vineyards, Forests and etc.
           </p>
 
+          <Link>
           <button className="bg-[#30336b] rounded-full px-5 text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">Let&apos;s Navigate 🔎</button>
+          </Link>
         </div>
         {/* slider section  */}
         <div className=" w-[95%] mx-auto lg:mx-0 lg:w-[60%] ">
