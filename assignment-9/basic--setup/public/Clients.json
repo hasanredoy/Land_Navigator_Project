@@ -11,14 +11,14 @@
     "gender": "male",
     "rating": 4,
     "review": "I recently used Land Navigator to search for agricultural land for my farming venture. While I found the site helpful overall, I wish there were more filtering options to narrow down the search results. Nonetheless, I managed to find a suitable property in the end.",
-    "image": "https://randomuser.me/api/portraits/men/2.jpg"
+    "image": "https://randomuser.me/api/portraits/men/9.jpg"
   },
   {
     "client_name": "Andrew Miller",
     "gender": "male",
     "rating": 4.5,
     "review": "Land Navigator is my go-to platform for finding land properties. The website is user-friendly, and the search functionality is robust. I appreciate the variety of listings available, which helped me find the perfect property for my needs.",
-    "image": "https://randomuser.me/api/portraits/men/3.jpg"
+    "image": "https://randomuser.me/api/portraits/men/8.jpg"
   },
   {
     "client_name": "Michael Thompson",
@@ -32,13 +32,13 @@
     "gender": "male",
     "rating": 4.8,
     "review": "Land Navigator exceeded my expectations in terms of user experience and functionality. The website is easy to navigate, and the property listings are detailed and informative. I found my dream property quickly and efficiently, thanks to Land Navigator.",
-    "image": "https://randomuser.me/api/portraits/men/5.jpg"
+    "image": "https://randomuser.me/api/portraits/men/11.jpg"
   },
   {
     "client_name": "Christopher Johnson",
     "gender": "male",
     "rating": 4.6,
     "review": "I was impressed with the range of options available on Land Navigator. Whether you're looking for agricultural land, ranches, or forests, this platform has it all. The search filters are effective, and the property descriptions are thorough. I'm very satisfied with my experience.",
-    "image": "https://randomuser.me/api/portraits/men/6.jpg"
+    "image": "https://randomuser.me/api/portraits/men/10.jpg"
   }
 ]

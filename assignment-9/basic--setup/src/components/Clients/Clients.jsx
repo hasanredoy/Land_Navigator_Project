@@ -12,11 +12,11 @@ const Clients = () => {
   console.log(Client);
   return (
     <div className=" grid grid-cols-1 lg:grid-cols-2 container mx-auto gap-10 rounded-xl border border-sky-200 p-2 my-10 mt-14">
-      {Client.map((client) => (
+      {Client.map((client , index) => (
         <div
           key={client?.name}
-          // data-aos={client.length % 2 === 0 ? "fade-right" : "fade-down"}
-          // data-aos-duration="2000"
+          data-aos={index % 2 === 0 ? "fade-right" : "fade-up"}
+          data-aos-duration="2000"
           className="card w-full bg-yellow-100 shadow-xl p-3"
         >
           <div className="avatar mx-auto">
