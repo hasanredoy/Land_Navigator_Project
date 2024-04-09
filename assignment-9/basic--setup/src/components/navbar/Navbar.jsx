@@ -27,7 +27,7 @@ const Navbar = () => {
     </div>
   );
   return (
-    <div className="navbar bg-base-300  rounded-xl">
+    <div className="navbar bg-base-300  rounded-xl  lg:h-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -58,7 +58,7 @@ const Navbar = () => {
         >
           <Link
             to={"/"}
-            className="btn btn-ghost text-lg lg:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-red-300 to-slate-500 animate-none  "
+            className="btn btn-ghost text-base lg:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-red-300 to-slate-500 animate-none  "
           >
             Land Navigator
           </Link>
@@ -99,9 +99,9 @@ const Navbar = () => {
         <div className=" w-6 lg:w-10 rounded-full">
           <img src="https://pluspng.com/img-png/png-user-icon-circled-user-icon-2240.png" />
         </div>
-        <button className=" bg-[#30336b] rounded-full px-2 lg:px-5 text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">
+        <Link to={'/login'}><button className=" bg-[#30336b] rounded-full px-2 lg:px-5 text-base lg:text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">
           Log In
-        </button>
+        </button></Link>
       </div>
     </div>
   );
