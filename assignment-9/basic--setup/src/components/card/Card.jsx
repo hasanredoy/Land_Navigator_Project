@@ -2,17 +2,23 @@ import PropTypes from "prop-types";
 import { FaEye } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
+
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-import "./card.css";
+
 
 // import required modules
-import { Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+
+// import required modules
+
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -27,35 +33,38 @@ const Card = ({ singleData, index }) => {
       className="card w-full bg-green-100 shadow-xl p-3"
     >
       <div>
-        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-          <SwiperSlide>
-            {" "}
-            <img
+
+<Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide><img
               src={
                 singleData?.slide1 || "https://i.postimg.cc/KYF8vVtF/slide1.jpg"
               }
-              className="w-full min-h-96 max-h-96 rounded-t-lg"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            {" "}
-            <img
+              className="w-full min-h-96 max-h-96 rounded-t-lg"/></SwiperSlide>
+        <SwiperSlide><img
               src={
                 singleData?.slide2 || "https://i.postimg.cc/KYF8vVtF/slide1.jpg"
               }
-              className="w-full min-h-96 max-h-96 rounded-t-lg"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            {" "}
-            <img
+              className="w-full min-h-96 max-h-96 rounded-t-lg"/></SwiperSlide>
+        <SwiperSlide><img
               src={
                 singleData?.image || "https://i.postimg.cc/KYF8vVtF/slide1.jpg"
               }
-              className="w-full min-h-96 max-h-96 rounded-t-lg"
-            />
-          </SwiperSlide>
-        </Swiper>
+              className="w-full min-h-96 max-h-96 rounded-t-lg"/></SwiperSlide>
+       
+      </Swiper>
       </div>
 
       <div className="card-body">

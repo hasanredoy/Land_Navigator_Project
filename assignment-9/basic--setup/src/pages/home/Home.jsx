@@ -75,7 +75,7 @@ const Home = () => {
         {/* text div  */}
         <div className=" flex justify-center w-full text-center flex-col gap-5 bg-gray-50 py-5 text-black">
           <h1 className=" text-2xl lg:text-4xl font-bold">
-            Check Out What Our Clients Says About Us
+            Check Out What Our Clients Says About Us.
           </h1>
          
         </div>
@@ -86,6 +86,7 @@ const Home = () => {
          
         >
         <Clients></Clients>
+        <button className=" btn btn-accent flex justify-center mx-auto ">Load More </button>
         </div>
       </section>
     </div>

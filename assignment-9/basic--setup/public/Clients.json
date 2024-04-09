@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "client_name": "John Smith",
     "gender": "male",
     "rating": 5,
@@ -7,6 +8,7 @@
     "image": "https://randomuser.me/api/portraits/men/1.jpg"
   },
   {
+    "id": 2,
     "client_name": "David Brown",
     "gender": "male",
     "rating": 4,
@@ -14,6 +16,7 @@
     "image": "https://randomuser.me/api/portraits/men/9.jpg"
   },
   {
+    "id": 3,
     "client_name": "Andrew Miller",
     "gender": "male",
     "rating": 4.5,
@@ -21,6 +24,7 @@
     "image": "https://randomuser.me/api/portraits/men/8.jpg"
   },
   {
+    "id": 4,
     "client_name": "Michael Thompson",
     "gender": "male",
     "rating": 4.7,
@@ -28,6 +32,7 @@
     "image": "https://randomuser.me/api/portraits/men/4.jpg"
   },
   {
+    "id": 5,
     "client_name": "Daniel White",
     "gender": "male",
     "rating": 4.8,
@@ -35,10 +40,59 @@
     "image": "https://randomuser.me/api/portraits/men/11.jpg"
   },
   {
-    "client_name": "Christopher Johnson",
+    "id": 6,
+    "client_name": "Oliver Harris",
+    "gender": "male",
+    "rating": 4.2,
+    "review": "Land Navigator made it easy for me to search for investment properties. The filtering options allowed me to narrow down my search based on my investment criteria. I appreciated the detailed property descriptions and found the platform to be a valuable resource in my real estate investment journey.",
+    "image": "https://randomuser.me/api/portraits/men/22.jpg"
+  },
+  {
+    "id": 7,
+    "client_name": "Alexander Clark",
     "gender": "male",
     "rating": 4.6,
-    "review": "I was impressed with the range of options available on Land Navigator. Whether you're looking for agricultural land, ranches, or forests, this platform has it all. The search filters are effective, and the property descriptions are thorough. I'm very satisfied with my experience.",
-    "image": "https://randomuser.me/api/portraits/men/10.jpg"
+    "review": "Land Navigator is an invaluable tool for anyone in the real estate industry. Whether you're a seasoned investor or a first-time buyer, this platform caters to all your needs. The user interface is sleek, and the search functionality is top-notch. I've recommended Land Navigator to all my colleagues!",
+    "image": "https://randomuser.me/api/portraits/men/14.jpg"
+  },
+  {
+    "id": 8,
+    "client_name": "William Roberts",
+    "gender": "male",
+    "rating": 4.4,
+    "review": "Land Navigator made my land search hassle-free. The platform's intuitive interface allowed me to explore various properties effortlessly. The detailed property descriptions and images provided me with a clear understanding of each listing. I'm delighted with my experience and would highly recommend Land Navigator to others.",
+    "image": "https://randomuser.me/api/portraits/men/18.jpg"
+  },
+  {
+    "id": 9,
+    "client_name": "Matthew Wilson",
+    "gender": "male",
+    "rating": 4.9,
+    "review": "I've been using Land Navigator for years now, and it continues to impress me. The platform's user-friendly interface and comprehensive property listings make it my first choice when searching for land. Whether you're a beginner or an experienced buyer, Land Navigator has something for everyone.",
+    "image": "https://randomuser.me/api/portraits/men/24.jpg"
+  },
+  {
+    "id": 10,
+    "client_name": "Ryan Taylor",
+    "gender": "male",
+    "rating": 4.7,
+    "review": "I recently purchased a property through Land Navigator, and I couldn't be happier with the experience. The platform's advanced search features allowed me to find exactly what I was looking for, and the transaction process was smooth and hassle-free. I highly recommend Land Navigator to anyone in the market for land.",
+    "image": "https://randomuser.me/api/portraits/men/28.jpg"
+  },
+  {
+    "id": 11,
+    "client_name": "Jack Evans",
+    "gender": "male",
+    "rating": 4.6,
+    "review": "Land Navigator has been a game-changer for me in my real estate endeavors. The platform's intuitive interface and extensive property listings have saved me countless hours in my property search. Whether you're a buyer or a seller, Land Navigator is the perfect tool for finding or listing land.",
+    "image": "https://randomuser.me/api/portraits/men/30.jpg"
+  },
+  {
+    "id": 12,
+    "client_name": "Nathan Harris",
+    "gender": "male",
+    "rating": 4.5,
+    "review": "I stumbled upon Land Navigator while searching for land for my construction project, and it exceeded my expectations. The platform's user-friendly interface and comprehensive property listings made it easy for me to find the perfect plot of land. I highly recommend Land Navigator to anyone in search of land.",
+    "image": "https://randomuser.me/api/portraits/men/32.jpg"
   }
 ]

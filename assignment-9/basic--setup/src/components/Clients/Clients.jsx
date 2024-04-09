@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { FaStarHalfAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const Clients = () => {
   const [Client, setClient] = useState([]);
@@ -10,9 +9,11 @@ const Clients = () => {
       .then((data) => setClient(data));
   }, []);
   console.log(Client);
+
+  const [clientsLength , setClientsLength] = useState(6)
   return (
     <div className=" grid grid-cols-1 lg:grid-cols-2 container mx-auto gap-10 rounded-xl border border-sky-200 p-2 my-10 mt-14">
-      {Client.map((client , index) => (
+      {Client.slice(0,clientsLength).map((client , index) => (
         <div
           key={client?.name}
           data-aos={index % 2 === 0 ? "fade-right" : "fade-up"}
@@ -25,17 +26,13 @@ const Clients = () => {
             </div>
           </div>
           <div className="card-body">
-            <h2 className=" text-black lg:text-3xl font-bold">
+            <h2 className=" text-black lg:text-3xl font-bold text-center">
               {client?.client_name}
             </h2>
             {client?.review && (
-              <p className=" text-black">
-                {client?.review.slice(0, 80)}
-                <span>
-                  <Link className="  font-bold text-blue-700">
-                    Read More...
-                  </Link>
-                </span>
+              <p className=" text-black ">
+                {client?.review}
+               
               </p>
             )}
 
@@ -49,6 +46,8 @@ const Clients = () => {
           </div>
         </div>
       ))}
+
+      
     </div>
   );
 };
