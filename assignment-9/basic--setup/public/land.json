@@ -31,8 +31,8 @@
     
     "slide1":"https://i.postimg.cc/1RpHTVMd/slide1.jpg",
     "slide2":"https://i.postimg.cc/rwpNKnc6/banner-1.jpg",
-    "rating":4.5,
-    "property_view":20
+    "rating":4.3,
+    "property_view":55
   },
   {
     "id": 3,
@@ -48,8 +48,8 @@
     "view_property": "View Property",
     "slide1":"https://i.postimg.cc/J4zpk4cd/slide-3.jpg",
     "slide2":"https://i.postimg.cc/4N3YtnLM/slide-1.jpg",
-    "rating":4.5,
-    "property_view":20
+    "rating":4.8,
+    "property_view":40
   },
   {
     "id": 4,
@@ -65,8 +65,8 @@
     "view_property": "View Property",
     "slide1": "https://i.postimg.cc/XqD3bN01/slide-3.jpg",
     "slide2": "https://i.postimg.cc/prV8SC2Y/slide-4.jpg",
-    "rating":4.5,
-    "property_view":20
+    "rating":4.9,
+    "property_view":19
   },
   {
     "id": 5,
@@ -76,30 +76,30 @@
     "price": "Contact for price",
     "status": "sale",
     "area": "500 acres",
-    "location": "Amazon Rainforest, Brazil",
+    "location": "Amazon , Brazil",
     "facilities": ["hiking trails", "wildlife observation points", "camping areas"],
     "image": "https://i.postimg.cc/Pf8bDpBx/slide-1.jpg",
     "view_property": "View Property",
     "slide1":"https://i.postimg.cc/qvKtjSsH/slide-2.jpg",
     "slide2":"https://i.postimg.cc/NFyGL2bv/slide-3.jpg",
-    "rating":4.5,
-    "property_view":20
+    "rating":4.1,
+    "property_view":15
   },
   {
     "id": 6,
     "estate_title": "Tea Plantation Estate",
     "segment_name": "Plantations",
-    "description": "Experience the timeless charm of Darjeeling, India, with this exquisite 1000-acre tea plantation estate offering panoramic views of lush tea gardens and rolling hills. Steeped in history and tradition, this estate presents a rare opportunity to own a piece of India's renowned tea-producing region. Featuring a fully-equipped processing factory, elegant manager's residence, and meticulously manicured tea gardens, indulge in the essence of luxury plantation living.",
+    "description": "Experience the timeless charm of Sylhet , Bangladesh, with this exquisite 1000-acre tea plantation estate offering panoramic views of lush tea gardens and rolling hills. Steeped in history and tradition, this estate presents a rare opportunity to own a piece of Bangladesh's renowned tea-producing region. Featuring a fully-equipped processing factory, elegant manager's residence, and meticulously manicured tea gardens, indulge in the essence of luxury plantation living.",
     "price": "$3,000,000",
     "status": "sale",
     "area": "1000 acres",
-    "location": "Darjeeling, India",
+    "location": "Sylhet , Bangladesh",
     "facilities": ["processing factory", "manager's residence", "tea gardens"],
     "image": "https://i.postimg.cc/Dft4L7GP/slide-1.jpg",
     "view_property": "View Property",
     "slide1":"https://i.postimg.cc/J0mVCygQ/slide-2.jpg",
     "slide2":"https://i.postimg.cc/XqvL54yb/slide-3.jpg",
-    "rating":4.5,
-    "property_view":20
+    "rating":4.4,
+    "property_view":25
   }
 ]

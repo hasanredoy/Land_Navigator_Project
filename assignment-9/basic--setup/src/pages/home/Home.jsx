@@ -2,6 +2,7 @@ import Slider from "../../components/slider/Slider";
 import "animate.css";
 import { useLoaderData } from "react-router-dom";
 import Card from "../../components/card/Card";
+import Clients from "../../components/Clients/Clients";
 
 const Home = () => {
   const land = useLoaderData();
@@ -20,13 +21,13 @@ const Home = () => {
           <h2 className="text-transparent bg-gradient-to-r bg-clip-text from-sky-400 via-[#232af888] to-amber-300 text-2xl lg:text-4xl font-bold animate__animated animate__backInDown animate__delay-0.5s">
             Welcome To Land Navigator.
           </h2>
-          <h3 className=" font-bold text-xl text-center lg:text-3xl  ">
+          <h3 className=" font-bold text-xl text-black text-center lg:text-3xl  ">
             <div className=" my-3 lg:my-5"></div>
             <span className=" text-green-500">Let&apos;s</span> Navig🔎te You to
             You&apos;re Dream <span className=" text-green-700">Land</span>.
           </h3>
 
-          <p className=" my-10 text-center">
+          <p className=" my-10 text-center text-black">
             We&apos;re Land Navigator. We Will navigate You to You&apos;re dream
             agricultural land, Ranches, Farms, Vineyards, Forests and etc.
           </p>
@@ -47,7 +48,7 @@ const Home = () => {
 
       <section className=" py-10">
         {/* text div  */}
-        <div className=" flex justify-center w-full text-center flex-col gap-5 bg-red-50 py-5">
+        <div className=" flex justify-center w-full text-center flex-col gap-5 bg-red-50 py-5 text-black">
           <h1 className=" text-2xl lg:text-4xl font-bold">
             Choose You&apos;re Dream Estate
           </h1>
@@ -66,6 +67,25 @@ const Home = () => {
           {land.map((data, index) => (
             <Card key={data.id} singleData={data} index={index}></Card>
           ))}
+        </div>
+      </section>
+      {/* Clients section  */}
+
+      <section className=" py-10">
+        {/* text div  */}
+        <div className=" flex justify-center w-full text-center flex-col gap-5 bg-gray-50 py-5 text-black">
+          <h1 className=" text-2xl lg:text-4xl font-bold">
+            Check Out What Our Clients Says About Us
+          </h1>
+         
+        </div>
+
+        {/* card div  */}
+        <div
+          id="cards"
+         
+        >
+        <Clients></Clients>
         </div>
       </section>
     </div>
