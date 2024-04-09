@@ -12,7 +12,9 @@
     "image": "https://i.postimg.cc/XNs9CKv9/banner.jpg",
     "view_property": "View Property",
     "slide1":"https://i.postimg.cc/KYF8vVtF/slide1.jpg",
-    "slide2":"https://i.postimg.cc/hj2L0VKz/slide2.jpg"
+    "slide2":"https://i.postimg.cc/hj2L0VKz/slide2.jpg",
+    "rating":4.5,
+    "property_view":20
   },
   {
     "id": 2,
@@ -28,7 +30,9 @@
     "view_property": "View Property",
     
     "slide1":"https://i.postimg.cc/1RpHTVMd/slide1.jpg",
-    "slide2":"https://i.postimg.cc/rwpNKnc6/banner-1.jpg"
+    "slide2":"https://i.postimg.cc/rwpNKnc6/banner-1.jpg",
+    "rating":4.5,
+    "property_view":20
   },
   {
     "id": 3,
@@ -43,7 +47,9 @@
     "image": "https://i.pinimg.com/originals/1c/7e/fd/1c7efd9bca0de498d988828de037cd59.jpg",
     "view_property": "View Property",
     "slide1":"https://i.postimg.cc/J4zpk4cd/slide-3.jpg",
-    "slide2":"https://i.postimg.cc/4N3YtnLM/slide-1.jpg"
+    "slide2":"https://i.postimg.cc/4N3YtnLM/slide-1.jpg",
+    "rating":4.5,
+    "property_view":20
   },
   {
     "id": 4,
@@ -58,7 +64,9 @@
     "image": "https://i.postimg.cc/pV0P8CnQ/banner.jpg",
     "view_property": "View Property",
     "slide1": "https://i.postimg.cc/XqD3bN01/slide-3.jpg",
-    "slide2": "https://i.postimg.cc/prV8SC2Y/slide-4.jpg"
+    "slide2": "https://i.postimg.cc/prV8SC2Y/slide-4.jpg",
+    "rating":4.5,
+    "property_view":20
   },
   {
     "id": 5,
@@ -73,7 +81,9 @@
     "image": "https://i.postimg.cc/Pf8bDpBx/slide-1.jpg",
     "view_property": "View Property",
     "slide1":"https://i.postimg.cc/qvKtjSsH/slide-2.jpg",
-    "slide2":"https://i.postimg.cc/NFyGL2bv/slide-3.jpg"
+    "slide2":"https://i.postimg.cc/NFyGL2bv/slide-3.jpg",
+    "rating":4.5,
+    "property_view":20
   },
   {
     "id": 6,
@@ -88,6 +98,8 @@
     "image": "https://i.postimg.cc/Dft4L7GP/slide-1.jpg",
     "view_property": "View Property",
     "slide1":"https://i.postimg.cc/J0mVCygQ/slide-2.jpg",
-    "slide2":"https://i.postimg.cc/XqvL54yb/slide-3.jpg"
+    "slide2":"https://i.postimg.cc/XqvL54yb/slide-3.jpg",
+    "rating":4.5,
+    "property_view":20
   }
 ]
