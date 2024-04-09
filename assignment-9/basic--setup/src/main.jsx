@@ -6,6 +6,7 @@ import Layout from "./Layout/Layout.jsx";
 import Home from "./pages/home/Home.jsx";
 import Login from "./pages/login/Login.jsx";
 import Register from "./pages/register/Register.jsx";
+import Details from "./components/Details/Details.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,12 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
+        loader: () => fetch("/land.json"),
+      },
+
     ],
   },
 ]);
