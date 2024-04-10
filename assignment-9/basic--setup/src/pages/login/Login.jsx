@@ -149,7 +149,7 @@ const Login = () => {
           </div>
         </form>
         <div className="divider my-7">or</div>
-        <div className=" flex ml-1">
+        <div className=" flex ml-1 flex-col lg:flex-row">
           <button onClick={handleGoogleLogin} className="btn border border-emerald-200 text-lg">
             <img
               src="https://tse1.mm.bing.net/th?id=OIP.NU47ZE8R8rFbMAB4a_w3FgHaHa&pid=Api&P=0&h=220"

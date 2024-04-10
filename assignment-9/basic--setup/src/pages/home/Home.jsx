@@ -57,7 +57,7 @@ const Home = () => {
 
       <section className=" py-10 mx-auto w-[94%] lg:container">
         {/* text div  */}
-        <div className=" flex justify-center w-[90%] lg:w-full text-center flex-col gap-5 bg-red-50 py-5 text-black">
+        <div className=" flex justify-center w-[100%] lg:w-full text-center flex-col gap-5 bg-red-50 py-5 text-black">
           <h1 className=" text-2xl lg:text-4xl font-bold">
             Choose You&apos;re Dream Estate
           </h1>

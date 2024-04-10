@@ -31,7 +31,7 @@ AOS.init();
 const Card = ({ singleData, index }) => {
   return (
     <div
-      data-aos={index % 2 === 0 ? "fade-right" : "fade-down"}
+      data-aos={index % 2 === 0 ? "fade-up" : "fade-down"}
       data-aos-duration="2000"
       className="card  bg-green-100 shadow-xl p-3"
     >
