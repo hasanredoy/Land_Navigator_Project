@@ -1,29 +1,39 @@
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 import AOS from "aos";
-import "aos/dist/aos.css"; 
-import { useState } from "react";
+import "aos/dist/aos.css";
+import { useContext, useState } from "react";
+import { AuthContext } from "../AuthPovider/AuthProvider";
 // ..
 AOS.init();
 
 const Navbar = () => {
- const [theme , setTheme] = useState(true)
- if(theme){
-  document.querySelector('html').setAttribute("data-theme", 'light')
+  const { user, logOut , setUser  } = useContext(AuthContext);
+  const [theme, setTheme] = useState(true);
+  if (theme) {
+    document.querySelector("html").setAttribute("data-theme", "light");
+  }
+  if (!theme) {
+    document.querySelector("html").setAttribute("data-theme", "synthwave");
+  }
 
-}
- if(!theme){
-  document.querySelector('html').setAttribute("data-theme", 'synthwave')
-
-}
+  const handleLogOut =()=>{
+    
+    logOut()
+    .then(()=>{
+      
+      setUser('')
+    })
+    .catch()
+  }
   const navBarLinks = (
     <div className=" flex flex-col lg:flex-row gap-3 lg:gap-6 items-center font-bold text-lg">
       <NavLink className={" "} to={"/"}>
         Home
       </NavLink>
 
-      <NavLink to={"/update-profile"}>Update Profile</NavLink>
-      <NavLink to={"/about-us"}>About Us</NavLink>
+      <NavLink to={"/updateProfile"}>Update Profile</NavLink>
+      <NavLink to={"/contact"}>Contact Us</NavLink>
     </div>
   );
   return (
@@ -53,9 +63,7 @@ const Navbar = () => {
             {navBarLinks}
           </ul>
         </div>
-        <div
-          
-        >
+        <div>
           <Link
             to={"/"}
             className="btn btn-ghost text-base lg:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-red-300 to-slate-500 animate-none  "
@@ -71,7 +79,7 @@ const Navbar = () => {
         <label className="swap swap-rotate ">
           {/* this hidden checkbox controls the state */}
           <input
-            onClick={()=>setTheme(!theme)}
+            onClick={() => setTheme(!theme)}
             type="checkbox"
             className="theme-controller"
             value="synthwave"
@@ -96,12 +104,33 @@ const Navbar = () => {
           </svg>
         </label>
 
-        <div className=" w-6 lg:w-10 rounded-full">
-          <img src="https://pluspng.com/img-png/png-user-icon-circled-user-icon-2240.png" />
+        {
+          user&&<div className="tooltip tooltip-bottom tooltip-success" data-tip={user?.displayName}>
+          <div
+            className=
+              " w-6 lg:w-12 lg:h-12 rounded-full" 
+            
+          >
+            <img
+              className=" rounded-full w-6 h-6 lg:w-14 lg:h-12 "
+              src={user?.photoURL||'https://tse3.mm.bing.net/th?id=OIP.HHVUf3TYqncgpJXyCMmxyAHaHa&pid=Api&P=0&h=220'}
+            />
+          </div>
         </div>
-        <Link to={'/login'}><button className=" bg-[#30336b] rounded-full px-2 lg:px-5 text-base lg:text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">
-          Log In
-        </button></Link>
+        }
+        {
+          user?  <button onClick={handleLogOut} className=" bg-[#30336b] rounded-full px-2 lg:px-5 text-base lg:text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">
+          Log Out
+        </button>:
+        <Link to={"/login"}>
+          <button className=" bg-[#30336b] rounded-full px-2 lg:px-5 text-base lg:text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">
+            Log In
+          </button>
+        </Link>
+        
+      
+      
+        }
       </div>
     </div>
   );

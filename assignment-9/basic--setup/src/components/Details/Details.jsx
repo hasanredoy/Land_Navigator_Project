@@ -4,6 +4,7 @@ import { useParams, useLoaderData, Link } from "react-router-dom";
 import "../card/card.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Helmet } from "react-helmet";
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,8 +14,11 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { LiaChartAreaSolid } from "react-icons/lia";
+import { useContext } from "react";
+import { AuthContext } from "../AuthPovider/AuthProvider";
 
 const Details = () => {
+  const {loading } = useContext(AuthContext)
   const { id } = useParams();
   const data = useLoaderData();
   console.log(data);
@@ -23,10 +27,20 @@ const Details = () => {
 
   return (
     <div
+    
       // data-aos={index % 2 === 0 ? "fade-right" : "fade-down"}
       // data-aos-duration="2000"
-      className=" bg-green-100 shadow-xl p-3 flex flex-col lg:flex-row gap-5"
+      className=" relative bg-green-100 shadow-xl p-3 flex flex-col lg:flex-row gap-5"
     >
+      <div>
+      {loading&&<span className=" absolute loading loading-bars loading-lg top-[20%] z-50 right-[50%]"></span>}
+      </div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Land Navigator | Land Details</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+
       <div className=" w-full lg:w-1/2 h-[400px] lg:max-h-[500px]">
         <Swiper
           spaceBetween={30}
@@ -74,11 +88,12 @@ const Details = () => {
           {singleData?.estate_title}
         </h2>
         {singleData?.description && (
-          <p className=" text-black">{singleData?.description} </p>
+          <p className=" text-black text-lg">{singleData?.description} </p>
         )}
 
         <h1 className=" text-black font-bold text-xl py-3">
-          Segment: <span className=" text-yellow-500">{singleData?.segment_name}</span>
+          Segment:{" "}
+          <span className=" text-yellow-500">{singleData?.segment_name}</span>
         </h1>
         <div className="divider"></div>
         <h1 className=" font-bold text-xl text-black">
@@ -124,16 +139,15 @@ const Details = () => {
         </div>
 
         <div className=" my-3 text-black">
-          <h1 className="font-bold text-xl">
-            Facilities You&apos;ll Get:
-          </h1>
+          <h1 className="font-bold text-xl">Facilities You&apos;ll Get:</h1>
           <ul className=" space-y-2 font-semibold">
-            {
-              singleData?.facilities.map((fac , index) => <li key={index} className=" capitalize">{1+index}.{fac}</li>)
-            }
+            {singleData?.facilities.map((fac, index) => (
+              <li key={index} className=" capitalize">
+                {1 + index}.{fac}
+              </li>
+            ))}
           </ul>
         </div>
-
 
         <div className=" w-full flex my-5">
           <Link to={`/`}>

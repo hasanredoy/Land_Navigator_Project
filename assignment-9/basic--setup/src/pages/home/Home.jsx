@@ -3,12 +3,21 @@ import "animate.css";
 import { useLoaderData } from "react-router-dom";
 import Card from "../../components/card/Card";
 import Clients from "../../components/Clients/Clients";
+import {Helmet} from "react-helmet";
+ 
+
 
 const Home = () => {
   const land = useLoaderData();
   console.log(land);
   return (
     <div className="">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Land Navigator | Home</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+
       <section
         style={{
           fontFamily:
