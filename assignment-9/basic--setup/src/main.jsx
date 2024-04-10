@@ -7,6 +7,7 @@ import Home from "./pages/home/Home.jsx";
 import Login from "./pages/login/Login.jsx";
 import Register from "./pages/register/Register.jsx";
 import Details from "./components/Details/Details.jsx";
+import AuthProvider from "./components/AuthPovider/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,13 +32,14 @@ const router = createBrowserRouter([
         element: <Details></Details>,
         loader: () => fetch("/land.json"),
       },
-
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );

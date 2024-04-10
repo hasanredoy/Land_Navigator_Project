@@ -77,11 +77,11 @@ const Details = () => {
           <p className=" text-black">{singleData?.description} </p>
         )}
 
-        <h1 className=" font-bold text-xl py-3">
+        <h1 className=" text-black font-bold text-xl py-3">
           Segment: <span className=" text-yellow-500">{singleData?.segment_name}</span>
         </h1>
         <div className="divider"></div>
-        <h1 className=" font-bold text-xl">
+        <h1 className=" font-bold text-xl text-black">
           For: <span className=" text-yellow-500">{singleData?.status}</span>
         </h1>
         <div className=" flex flex-col lg:flex-row justify-between my-10">
@@ -123,7 +123,7 @@ const Details = () => {
           </h3>
         </div>
 
-        <div className=" my-3">
+        <div className=" my-3 text-black">
           <h1 className="font-bold text-xl">
             Facilities You&apos;ll Get:
           </h1>
