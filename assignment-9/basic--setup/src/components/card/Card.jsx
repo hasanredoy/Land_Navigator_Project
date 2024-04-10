@@ -33,7 +33,7 @@ const Card = ({ singleData, index }) => {
     <div
       data-aos={index % 2 === 0 ? "fade-right" : "fade-down"}
       data-aos-duration="2000"
-      className="card w-full bg-green-100 shadow-xl p-3"
+      className="card  bg-green-100 shadow-xl p-3"
     >
       <div>
 
@@ -83,11 +83,11 @@ const Card = ({ singleData, index }) => {
           </p>
         )}
 
-        <div className=" flex justify-between my-10">
+        <div className=" flex flex-col lg:flex-row gap-y-4  justify-between my-10">
           <h3
             data-aos-duration="1000"
             data-aos="fade-left"
-            className=" flex gap-3  font-bold text-sm lg:text-lg text-purple-600 items-center justify-center border-r pr-2 border-gray-600"
+            className=" flex gap-3  font-bold text-sm lg:text-lg text-purple-600 items-center justify-center border-none lg:border-r pr-2 border-gray-600"
           >
             {" "}
             Total View:{" "}
@@ -98,7 +98,7 @@ const Card = ({ singleData, index }) => {
           <h3
             data-aos-duration="1000"
             data-aos="fade-right"
-            className=" flex gap-3  font-bold text-sm lg:text-lg text-emerald-600 items-center justify-center pl-2 border-l border-gray-600"
+            className=" flex gap-3  font-bold text-sm lg:text-lg text-emerald-600 items-center justify-center pl-2 border-none lg:border-l border-gray-600"
           >
             {" "}
             Location:{" "}
@@ -109,20 +109,20 @@ const Card = ({ singleData, index }) => {
 
 
           <h1 className=" font-bold text-xl">For: <span className=" text-yellow-500">{singleData.status}</span></h1>
-        <div className=" flex justify-between my-10">
+        <div className=" flex flex-col lg:flex-row justify-between my-10">
           <h3
           
-            className=" flex gap-3  font-bold text-sm lg:text-lg text-gray-600 items-center justify-center "
+            className=" flex gap-3  font-bold text-sm lg:text-lg text-gray-600 items-center justify-start  lg:justify-center "
           >
             {" "}
             Price:{" "}
             <FaDollarSign className=" text-red-400 text-xl lg:text-2xl"></FaDollarSign>{" "}
             {singleData?.price}
           </h3>
-
+         <div className=" divider"></div>
           <h3
           
-            className=" flex gap-3  font-bold text-sm lg:text-lg text-stone-600 items-center justify-center pl-2 "
+            className=" flex gap-3  font-bold text-sm lg:text-lg text-stone-600 items-center justify-end  lg:justify-center  pl-2 "
           >
             Area:
             <LiaChartAreaSolid className=" text-xl lg:text-2xl text-gray-600"></LiaChartAreaSolid>{" "}
@@ -132,9 +132,9 @@ const Card = ({ singleData, index }) => {
 
 
        <div className=" my-5">
-        <h3 className=" text-black flex gap-3 justify-end items-center text-xl font-bold">Rating:    {singleData?.rating}  <FaStarHalfAlt className=" lg:text-2xl text-orange-500"></FaStarHalfAlt> out of 5</h3>
+        <h3 className=" text-black flex gap-3 justify-center items-center  text-lg lg:text-xl font-bold">Rating:    {singleData?.rating}  <FaStarHalfAlt className=" text-lg lg:text-2xl text-orange-500"></FaStarHalfAlt> out of 5</h3>
        </div>
-        <div className=" w-full flex my-5">
+        <div className=" w-full  flex justify-center my-5">
          <Link to={`/details/${singleData.id}`}>
          <button className=" bg-[#30336b] rounded-full px-5 text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 w-full">
             View Details

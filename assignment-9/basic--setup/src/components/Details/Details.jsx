@@ -1,5 +1,5 @@
 import { CiLocationOn } from "react-icons/ci";
-import { FaEye, FaStarHalfAlt } from "react-icons/fa";
+import { FaDollarSign, FaEye, FaStarHalfAlt } from "react-icons/fa";
 import { useParams, useLoaderData, Link } from "react-router-dom";
 import "../card/card.css";
 
@@ -12,19 +12,14 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import Map from "./Map";
-
-
-
+import { LiaChartAreaSolid } from "react-icons/lia";
 
 const Details = () => {
- 
   const { id } = useParams();
   const data = useLoaderData();
   console.log(data);
   const singleData = data.find((singleData) => singleData.id === +id);
   console.log(singleData);
-
 
   return (
     <div
@@ -32,7 +27,7 @@ const Details = () => {
       // data-aos-duration="2000"
       className=" bg-green-100 shadow-xl p-3 flex flex-col lg:flex-row gap-5"
     >
-      <div className=" w-1/2">
+      <div className=" w-full lg:w-1/2 h-[400px] lg:max-h-[500px]">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -52,7 +47,7 @@ const Details = () => {
               src={
                 singleData?.slide1 || "https://i.postimg.cc/KYF8vVtF/slide1.jpg"
               }
-              className=" rounded-t-lg"
+              className=" rounded-t-lg  h-full"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -60,7 +55,7 @@ const Details = () => {
               src={
                 singleData?.slide2 || "https://i.postimg.cc/KYF8vVtF/slide1.jpg"
               }
-              className="rounded-t-lg"
+              className="rounded-t-lg h-full"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -68,13 +63,13 @@ const Details = () => {
               src={
                 singleData?.image || "https://i.postimg.cc/KYF8vVtF/slide1.jpg"
               }
-              className=" rounded-t-lg"
+              className=" rounded-t-lg h-full"
             />
           </SwiperSlide>
         </Swiper>
       </div>
 
-      <div className="card-body">
+      <div className="card-body border-l-none lg:border-l border-gray-300">
         <h2 className=" text-black lg:text-3xl font-bold">
           {singleData?.estate_title}
         </h2>
@@ -82,12 +77,30 @@ const Details = () => {
           <p className=" text-black">{singleData?.description} </p>
         )}
 
-        <div className=" flex justify-between my-10">
-          <h3
-            data-aos-duration="1000"
-            data-aos="fade-left"
-            className=" flex gap-3  font-bold text-sm lg:text-lg text-purple-600 items-center justify-center"
-          >
+        <h1 className=" font-bold text-xl py-3">
+          Segment: <span className=" text-yellow-500">{singleData?.segment_name}</span>
+        </h1>
+        <div className="divider"></div>
+        <h1 className=" font-bold text-xl">
+          For: <span className=" text-yellow-500">{singleData?.status}</span>
+        </h1>
+        <div className=" flex flex-col lg:flex-row justify-between my-10">
+          <h3 className=" flex gap-3  font-bold text-sm lg:text-lg text-gray-600 items-center justify-start  lg:justify-center ">
+            {" "}
+            Price:{" "}
+            <FaDollarSign className=" text-red-400 text-xl lg:text-2xl"></FaDollarSign>{" "}
+            {singleData?.price}
+          </h3>
+          <div className=" divider"></div>
+          <h3 className=" flex gap-3  font-bold text-sm lg:text-lg text-stone-600 items-center justify-end  lg:justify-center  pl-2 ">
+            Area:
+            <LiaChartAreaSolid className=" text-xl lg:text-2xl text-gray-600"></LiaChartAreaSolid>{" "}
+            {singleData?.area}
+          </h3>
+        </div>
+
+        <div className=" flex justify-between my-3">
+          <h3 className=" flex gap-3  font-bold text-sm lg:text-lg text-purple-600 items-center justify-center">
             {" "}
             Total View:{" "}
             <FaEye className=" text-red-400 text-xl lg:text-2xl"></FaEye>{" "}
@@ -101,16 +114,27 @@ const Details = () => {
             <CiLocationOn className=" text-xl lg:text-2xl text-red-600"></CiLocationOn>{" "}
             {singleData?.location}
           </h3>
-
-           <Map></Map>
         </div>
-        <div className=" my-5">
-          <h3 className=" text-black flex gap-3 justify-center items-center text-xl font-bold">
-            Rating By Our Clients: {singleData?.rating}{" "}
-            <FaStarHalfAlt className=" lg:text-2xl text-orange-500"></FaStarHalfAlt>{" "}
+        <div className=" my-3">
+          <h3 className=" text-black flex gap-1 justify-start items-center text-lg lg:text-xl font-semibold">
+            Rating: {singleData?.rating}{" "}
+            <FaStarHalfAlt className="text-xl lg:text-2xl text-orange-500"></FaStarHalfAlt>{" "}
             out of 5
           </h3>
         </div>
+
+        <div className=" my-3">
+          <h1 className="font-bold text-xl">
+            Facilities You&apos;ll Get:
+          </h1>
+          <ul className=" space-y-2 font-semibold">
+            {
+              singleData?.facilities.map((fac , index) => <li key={index} className=" capitalize">{1+index}.{fac}</li>)
+            }
+          </ul>
+        </div>
+
+
         <div className=" w-full flex my-5">
           <Link to={`/`}>
             <button className=" bg-[#30336b] rounded-full px-5 text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 w-full">

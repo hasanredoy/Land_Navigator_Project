@@ -8,16 +8,16 @@ const Home = () => {
   const land = useLoaderData();
   console.log(land);
   return (
-    <div className=" ">
+    <div className="">
       <section
         style={{
           fontFamily:
             "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
         }}
-        className="container mx-auto my-10 bg-base-100 p-3 border bg-gradient-to-r from-red-50 to-lime-50 flex flex-col lg:flex-row  gap-10"
+        className=" mx-auto my-10 bg-base-100 p-3 border bg-gradient-to-r from-red-50 to-lime-50 flex flex-col lg:flex-row  gap-10"
       >
         {/* text section ' */}
-        <div className=" w-[95%] mx-auto lg:mx-0 lg:w-[40%] flex flex-col justify-center items-center min-h-[500px]">
+        <div className=" w-[90%]  lg:mx-0 lg:w-[40%] flex flex-col justify-center items-center min-h-[500px]">
           <h2 className="text-transparent bg-gradient-to-r bg-clip-text from-sky-400 via-[#232af888] to-amber-300 text-2xl lg:text-4xl font-bold animate__animated animate__backInDown animate__delay-0.5s">
             Welcome To Land Navigator.
           </h2>
@@ -39,16 +39,16 @@ const Home = () => {
           </a>
         </div>
         {/* slider section  */}
-        <div className=" w-[95%] mx-auto lg:mx-0 lg:w-[60%] ">
+        <div className=" w-full lg:mx-0 lg:w-[60%] ">
           <Slider></Slider>
         </div>
       </section>
 
       {/* Card section  */}
 
-      <section className=" py-10">
+      <section className=" py-10 mx-auto w-[94%] lg:container">
         {/* text div  */}
-        <div className=" flex justify-center w-full text-center flex-col gap-5 bg-red-50 py-5 text-black">
+        <div className=" flex justify-center w-[90%] lg:w-full text-center flex-col gap-5 bg-red-50 py-5 text-black">
           <h1 className=" text-2xl lg:text-4xl font-bold">
             Choose You&apos;re Dream Estate
           </h1>
@@ -62,7 +62,7 @@ const Home = () => {
         {/* card div  */}
         <div
           id="cards"
-          className=" grid grid-cols-1 lg:grid-cols-2 container mx-auto gap-10 rounded-xl border border-sky-200 p-2 my-10 mt-14"
+          className=" grid grid-cols-1 lg:grid-cols-2 mx-auto w-[98%] lg:container gap-10 rounded-xl border border-sky-200 p-2 my-10 mt-14"
         >
           {land.map((data, index) => (
             <Card key={data.id} singleData={data} index={index}></Card>
