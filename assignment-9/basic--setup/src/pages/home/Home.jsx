@@ -31,8 +31,8 @@ const Home = () => {
         className=" mx-auto my-10 bg-base-100 p-3 border bg-gradient-to-r from-red-50 to-lime-50 flex flex-col lg:flex-row  gap-10"
       >
         {/* text section ' */}
-        <div className=" w-[90%]  lg:mx-0 lg:w-[40%] flex flex-col justify-center items-center min-h-[500px]">
-          <h2 className="text-transparent bg-gradient-to-r bg-clip-text from-sky-400 via-[#232af888] to-amber-300 text-2xl lg:text-4xl font-bold animate__animated animate__backInDown animate__delay-0.5s">
+        <div className=" w-[95%]  lg:mx-0 lg:w-[40%] flex flex-col justify-center items-center min-h-[500px]">
+          <h2 className="text-transparent bg-gradient-to-r bg-clip-text from-sky-400 via-[#232af888] to-amber-300 text-2xl lg:text-4xl font-bold animate__animated animate__backInDown animate__delay-0.5s text-center">
             Welcome To Land Navigator.
           </h2>
           <h3 className=" font-bold text-xl text-black text-center lg:text-3xl  ">
@@ -53,14 +53,14 @@ const Home = () => {
           </a>
         </div>
         {/* slider section  */}
-        <div className=" w-full lg:mx-0 lg:w-[60%] ">
+        <div className=" w-full  lg:mx-0 lg:w-[60%] ">
           <Slider></Slider>
         </div>
       </section>
 
       {/* Card section  */}
 
-      <section className=" py-10 mx-auto w-[94%] lg:container">
+      <section className=" py-10 mx-auto w-[98%] lg:container">
         {/* text div  */}
         <div className=" flex justify-center w-[100%] lg:w-full text-center flex-col gap-5 bg-red-50 py-5 text-black">
           <h1 className=" text-2xl lg:text-4xl font-bold">

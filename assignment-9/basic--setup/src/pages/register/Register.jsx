@@ -2,7 +2,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../components/AuthPovider/AuthProvider";
 
@@ -16,6 +16,8 @@ import {Helmet} from "react-helmet";
 AOS.init();
 
 const Register = () => {
+
+  const navigate = useNavigate()
   const [err, setErr] = useState("");
   const { createUser } = useContext(AuthContext);
 
@@ -48,12 +50,16 @@ const Register = () => {
     // creating user
     createUser(email, password)
       .then((res) => {
+
         updateProfile(res.user, {
           displayName: name,
           photoURL: photo,
         });
         // console.log(res?.user);
         toast.success("Registered Successful");
+        setTimeout(()=>{
+          navigate('/login')
+        },800) 
       })
       .catch((err) => {
         console.log(err);
@@ -75,7 +81,7 @@ const Register = () => {
       <div
         data-aos="zoom-in"
         data-aos-duration="1000"
-        className=" w-[96%] mx-auto md:w-2/3 lg:w-1/2 text-base lg:text-xl  shrink-0 max-w-lg shadow-2xl bg-base-200 rounded-xl my-10"
+        className=" w-[96%] mx-auto md:w-2/3 lg:w-1/2 text-base lg:text-xl  shrink-0  shadow-2xl bg-base-200 rounded-xl my-10"
       >
         <h1 className=" font-bold text-lg lg:text-xl text-center py-5">
           {" "}

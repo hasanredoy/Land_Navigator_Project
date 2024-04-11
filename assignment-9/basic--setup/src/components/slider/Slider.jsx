@@ -2,7 +2,7 @@ import 'animate.css';
 const Slider = () => {
  
   return (
-    <div className="carousel w-full min-h-[500px] rounded-xl">
+    <div className="carousel w-full min-h-[400px] lg:min-h-[500px] rounded-xl">
     <div id="slide1" className="carousel-item relative w-full    ">
     
      <img  src="https://i.postimg.cc/XNs9CKv9/banner.jpg" className=" relative w-full z-0 " />

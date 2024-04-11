@@ -54,7 +54,9 @@ const Login = () => {
       .then(() => {
 
         toast.success("Logged In Successful");
-        navigate(location?.state?location.state:'/')
+        navigate(location?.state?location.state:setTimeout(()=>{
+          navigate('/')
+        },1000))
       })
       .catch((err) => {
         console.log(err);
@@ -69,7 +71,9 @@ const Login = () => {
     .then(res =>{
       // console.log(res.user);
       toast.success(res.user.displayName+' '+'You Have Logged In Successfully')
-      navigate(location?.state?location.state:'/')
+      navigate(location?.state?location.state:setTimeout(()=>{
+        navigate('/')
+      },1000))
     })
     .catch(err =>{
       // console.log(err);
@@ -81,7 +85,9 @@ const Login = () => {
     .then(res =>{
       toast.success(res.user.displayName+ " "+'You Have Logged In Successfully')
       // console.log(res.user);
-      navigate(location?.state?location.state:'/')
+      navigate(location?.state?location.state:setTimeout(()=>{
+        navigate('/')
+      },1000))
     })
     .catch(err =>{
       toast.err(err.message)
@@ -91,7 +97,7 @@ const Login = () => {
 
 
   return (
-    <div className=" min-h-screen flex items-center justify-center bg-gradient-to-t from-slate-200 to-orange-100">
+    <div className=" min-h-screen flex items-center justify-center bg-gradient-to-t from-slate-200 to-orange-100 py-10">
       <Helmet>
         <meta charSet="utf-8" />
         <title>Land Navigator | Login</title>
@@ -100,7 +106,7 @@ const Login = () => {
       <div
         data-aos="zoom-in"
         data-aos-duration="1000"
-        className=" w-[96%] mx-auto md:w-2/3 lg:w-[55%] text-base lg:text-xl  shrink-0 max-w-lg shadow-2xl bg-base-200 rounded-xl"
+        className=" w-[96%] mx-auto md:w-2/3 lg:w-[50%] text-base lg:text-xl  shrink-0  shadow-2xl bg-base-200 rounded-xl"
       >
         <h1 className=" font-bold text-lg lg:text-xl text-center py-5">
           {" "}
@@ -162,7 +168,7 @@ const Login = () => {
           </div>
         </form>
         <div className="divider my-7">or</div>
-        <div className=" flex mx-1 flex-col">
+        <div className=" flex mx-5 flex-col">
           <button onClick={handleGoogleLogin} className="btn border border-emerald-200 text-lg">
             <img
               src="https://tse1.mm.bing.net/th?id=OIP.NU47ZE8R8rFbMAB4a_w3FgHaHa&pid=Api&P=0&h=220"

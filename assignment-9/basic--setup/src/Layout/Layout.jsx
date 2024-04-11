@@ -11,7 +11,7 @@ const Layout = () => {
       <div   style={{
           fontFamily:
             "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-        }} className='  w-[96%] lg:w-[96%] mx-auto min-h-screen'>
+        }} className='  w-[98%] lg:w-[96%] mx-auto min-h-screen'>
       <Outlet></Outlet>
       </div>
 

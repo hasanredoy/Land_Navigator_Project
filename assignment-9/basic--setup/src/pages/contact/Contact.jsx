@@ -98,7 +98,7 @@ const Contact = () => {
               <h1 className=" font-bold text-2xl text-center">
                 Direct Contact
               </h1>
-              <p  className=" text-lg"> <span className="font-bold text-xl text-red-400"> Head Office</span> : Al Shati st , Al Rahba , Abudhabi , United Arab Emirates</p>
+              <p  className=" text-lg"> <span className="font-bold text-xl text-red-400"> Head Office :  </span> Al Shati st , Al Rahba , Abudhabi , United Arab Emirates</p>
             </div>
           </div>
         </div>
