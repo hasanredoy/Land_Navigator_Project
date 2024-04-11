@@ -11,6 +11,7 @@ import AuthProvider from "./components/AuthPovider/AuthProvider.jsx";
 import Error from "./pages/error/Error.jsx";
 import UpdateProfile from "./pages/updateProfile/UpdateProfile.jsx";
 import Contact from "./pages/contact/Contact.jsx";
+import PrivetRoute from "./pages/privet/PrivetRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,17 +34,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <Details></Details>,
+        element:<PrivetRoute> <Details></Details></PrivetRoute>,
         loader: () => fetch("/land.json"),
       },
       {
         path: "/updateProfile",
-        element: <UpdateProfile></UpdateProfile>,
+        element: <PrivetRoute><UpdateProfile></UpdateProfile></PrivetRoute>,
        
       },
       {
         path: "/contact",
-        element: <Contact></Contact>,
+        element: <PrivetRoute><Contact></Contact></PrivetRoute>,
        
       },
     ],

@@ -1,7 +1,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useContext, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link ,useLocation,useNavigate } from "react-router-dom";
 
 AOS.init();
 
@@ -17,6 +17,9 @@ import { Helmet } from "react-helmet";
 
 const Login = () => {
   const [eye, setEye] = useState(true);
+  const location = useLocation()
+  // console.log(location);
+  const navigate = useNavigate()
 
   const {
     register,
@@ -30,7 +33,7 @@ const Login = () => {
 
   const [err, setErr] = useState("");
 
-  const onSubmit = (e) => {
+  const onSubmit = () => {
     const email = watch("email");
     const password = watch("password");
 
@@ -48,8 +51,10 @@ const Login = () => {
     // log in user
 
     logInUser(email, password)
-      .then((res) => {
+      .then(() => {
+
         toast.success("Logged In Successful");
+        navigate(location?.state?location.state:'/')
       })
       .catch((err) => {
         console.log(err);
@@ -62,21 +67,29 @@ const Login = () => {
   const handleGoogleLogin = ()=>{
     googleLogin()
     .then(res =>{
-      console.log(res.user);
+      // console.log(res.user);
+      toast.success(res.user.displayName+' '+'You Have Logged In Successfully')
+      navigate(location?.state?location.state:'/')
     })
     .catch(err =>{
-      console.log(err);
+      // console.log(err);
+      toast.err(err.message)
     })
   } 
   const handleGitHubLogin = ()=>{
     gitHubLogin()
     .then(res =>{
-      console.log(res.user);
+      toast.success(res.user.displayName+ " "+'You Have Logged In Successfully')
+      // console.log(res.user);
+      navigate(location?.state?location.state:'/')
     })
     .catch(err =>{
-      console.log(err);
+      toast.err(err.message)
+      // console.log(err);
     })
   } 
+
+
   return (
     <div className=" min-h-screen flex items-center justify-center bg-gradient-to-t from-slate-200 to-orange-100">
       <Helmet>
@@ -149,7 +162,7 @@ const Login = () => {
           </div>
         </form>
         <div className="divider my-7">or</div>
-        <div className=" flex ml-1 flex-col lg:flex-row">
+        <div className=" flex mx-1 flex-col">
           <button onClick={handleGoogleLogin} className="btn border border-emerald-200 text-lg">
             <img
               src="https://tse1.mm.bing.net/th?id=OIP.NU47ZE8R8rFbMAB4a_w3FgHaHa&pid=Api&P=0&h=220"
@@ -158,10 +171,10 @@ const Login = () => {
             />
             Login With Google
           </button>
-          <div className="divider">or</div>
+          <div className="divider"></div>
           <button onClick={handleGitHubLogin}  className="btn border border-gray-200 text-lg">
             <img
-              src="https://tse4.mm.bing.net/th?id=OIP.8SVgggxQcO5L6Dw_61ac4QHaEK&pid=Api&P=0&h=220"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1200px-GitHub_Invertocat_Logo.svg.png"
               className=" w-9 h-8 rounded-full"
               alt=""
             />

@@ -149,10 +149,15 @@ const Details = () => {
           </ul>
         </div>
 
-        <div className=" w-full flex my-5">
+        <div className=" w-full flex my-5 justify-between">
+          <Link to={`/contact`}>
+            <button className=" bg-[#30616b] rounded-full px-5 text-lg font-bold text-white flex justify-center items-center h-10 hover:bg-slate-100 hover:text-black w-full">
+              Buy !
+            </button>
+          </Link>
           <Link to={`/`}>
             <button className=" bg-[#30336b] rounded-full px-5 text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 w-full">
-              Home
+               Back Home
             </button>
           </Link>
         </div>

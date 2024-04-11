@@ -5,6 +5,9 @@ import { AuthContext } from "../../components/AuthPovider/AuthProvider";
 
 import {Navigate} from "react-router-dom"
 import auth from "../../firebase/project-a9.init";
+
+
+
 const UpdateProfile = () => {
   const nameRef =  useRef()
   const photoRef =  useRef()
@@ -43,10 +46,15 @@ const UpdateProfile = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <div className="card shrink-0 w-[95%] mx-auto md:w-2/3 lg:w-1/2 shadow-2xl bg-base-100">
+        <img src={user?.photoURL} alt="" className=" h-36 w-36 rounded-full mx-auto my-5" />
         <h1 className=" text-center text-xl lg:text-3xl font-bold text-purple-900">Wellcome {user?.displayName}</h1>
-        <h2 className=" text-center text-lg lg:text-xl font-semibold py-3">You&apos;re Email: {user?.email}</h2>
+
+        <h2 className=" text-center text-base lg:text-xl font-semibold py-3">You&apos;re Email: {user?.email}</h2>
+
+
+
         <form onSubmit={willUpdateUserProfile} className="card-body">
-          <h1 className=" text-xl lg:text-2xl font-bold text-amber-900">Would You Like To Update You&apos;re Profile</h1>
+          <h1 className=" text-base lg:text-2xl font-bold text-amber-900">Would You Like To Update You&apos;re Profile</h1>
           <div className="divider"></div>
           <div className="form-control">
             <label className="label">

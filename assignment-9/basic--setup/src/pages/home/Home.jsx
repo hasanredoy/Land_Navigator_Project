@@ -4,12 +4,17 @@ import { useLoaderData } from "react-router-dom";
 import Card from "../../components/card/Card";
 import Clients from "../../components/Clients/Clients";
 import {Helmet} from "react-helmet";
+import { useContext } from "react";
+import { AuthContext } from "../../components/AuthPovider/AuthProvider";
  
 
 
 const Home = () => {
+   
+  const {clientsLength , setClientsLength} = useContext(AuthContext)
+
   const land = useLoaderData();
-  console.log(land);
+  console.log(clientsLength);
   return (
     <div className="">
       <Helmet>
@@ -95,7 +100,9 @@ const Home = () => {
          
         >
         <Clients></Clients>
-        <button className=" btn btn-accent flex justify-center mx-auto ">Load More </button>
+{
+  clientsLength==6 && <button onClick={ ()=>setClientsLength(12)}  className=" btn btn-accent flex justify-center mx-auto ">View More </button>
+}
         </div>
       </section>
     </div>

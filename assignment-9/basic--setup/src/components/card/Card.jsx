@@ -86,7 +86,7 @@ const Card = ({ singleData, index }) => {
         <div className=" flex flex-col lg:flex-row gap-y-4  justify-between my-10">
           <h3
             data-aos-duration="1000"
-            data-aos="fade-left"
+            data-aos="zoom-in"
             className=" flex gap-3  font-bold text-sm lg:text-lg text-purple-600 items-center justify-center border-none lg:border-r pr-2 border-gray-600"
           >
             {" "}
@@ -97,7 +97,7 @@ const Card = ({ singleData, index }) => {
 
           <h3
             data-aos-duration="1000"
-            data-aos="fade-right"
+            data-aos="zoom-out"
             className=" flex gap-3  font-bold text-sm lg:text-lg text-emerald-600 items-center justify-center pl-2 border-none lg:border-l border-gray-600"
           >
             {" "}

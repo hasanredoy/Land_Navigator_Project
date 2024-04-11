@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaStarHalfAlt } from "react-icons/fa";
+import { AuthContext } from "../AuthPovider/AuthProvider";
 
 const Clients = () => {
   const [Client, setClient] = useState([]);
@@ -10,13 +11,14 @@ const Clients = () => {
   }, []);
   console.log(Client);
 
-  const [clientsLength , setClientsLength] = useState(6)
+ const {clientsLength} = useContext(AuthContext)  
+
   return (
     <div className=" grid grid-cols-1 lg:grid-cols-2 container mx-auto gap-10 rounded-xl border border-sky-200 p-2 my-10 mt-14">
       {Client.slice(0,clientsLength).map((client , index) => (
         <div
           key={client?.name}
-          data-aos={index % 2 === 0 ? "fade-right" : "fade-up"}
+          data-aos={index % 2 === 0 ? "zoom-in" : "fade-up"}
           data-aos-duration="2000"
           className="card w-full bg-yellow-100 shadow-xl p-3"
         >
@@ -37,8 +39,8 @@ const Clients = () => {
             )}
 
             <div className=" my-5">
-              <h3 className=" text-black flex gap-3 justify-center items-center text-xl font-bold">
-                Rating By Our Clients: {client?.rating}{" "}
+              <h3 className=" text-black flex gap-3 justify-start items-center text-lg font-bold">
+                Rating By Our Client: {client?.rating}{" "}
                 <FaStarHalfAlt className=" lg:text-2xl text-orange-500"></FaStarHalfAlt>{" "}
                 out of 5
               </h3>

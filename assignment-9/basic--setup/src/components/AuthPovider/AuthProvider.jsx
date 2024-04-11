@@ -5,12 +5,18 @@ import auth from "../../firebase/project-a9.init";
 
 
 export const AuthContext = createContext(null)
+
+
 const AuthProvider = ({children}) => {
+
   const googleProvider =  new GoogleAuthProvider()
 const gitHubProvider =  new GithubAuthProvider()
 
  const [user , setUser] = useState([])
  const [loading , setLading] = useState(true)
+
+
+ const [clientsLength , setClientsLength] = useState(6)
 
   const createUser = (email , password)=>{
     setLading(true)
@@ -54,7 +60,9 @@ const gitHubProvider =  new GithubAuthProvider()
     setUser,
     loading,
     gitHubLogin,
-    googleLogin
+    googleLogin,
+    clientsLength,
+    setClientsLength
    } 
   return (
     <div>
