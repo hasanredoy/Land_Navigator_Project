@@ -78,7 +78,7 @@ const Card = ({ singleData, index }) => {
           <p className=" text-black">
             {singleData?.description.slice(0, 150)}{" "}
             <span>
-              <Link className="  font-bold text-blue-700">Read More...</Link>
+              <Link to={`/details/${singleData.id}`} className="  font-bold text-blue-700">Read More...</Link>
             </span>
           </p>
         )}
@@ -108,7 +108,7 @@ const Card = ({ singleData, index }) => {
         </div>
 
 
-          <h1 className=" font-bold text-xl">For: <span className=" text-yellow-500">{singleData.status}</span></h1>
+          <h1 className=" font-bold text-xl text-black">For: <span className=" text-yellow-500">{singleData.status}</span></h1>
         <div className=" flex flex-col lg:flex-row justify-between my-10">
           <h3
           

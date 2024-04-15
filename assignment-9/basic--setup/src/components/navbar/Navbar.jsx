@@ -66,7 +66,7 @@ const Navbar = () => {
         <div>
           <Link
             to={"/"}
-            className="btn btn-ghost text-base lg:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-red-300 to-slate-500 animate-none  "
+            className="btn btn-ghost text-sm lg:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#800080] to-sky-400 via-[#082a7b] animate-none  "
           >
             Land Navigator
           </Link>
@@ -75,9 +75,9 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navBarLinks}</ul>
       </div>
-      <div className="navbar-end gap-2 lg:gap-5">
+      <div className="navbar-end flex items-center justify-end gap-2 lg:gap-5 h-full border-l pl-2 border-black lg:border-none">
         <div className=" tooltip tooltip-bottom" data-tip="Click To Change Theme">
-        <label className="swap swap-rotate ">
+        <label className="swap swap-rotate w-10 h-10 ">
           {/* this hidden checkbox controls the state */}
           <input
             onClick={() => setTheme(!theme)}
@@ -88,7 +88,7 @@ const Navbar = () => {
 
           {/* sun icon */}
           <svg
-            className="swap-off fill-current w-6 h-6 lg:w-10 lg:h-10"
+            className="swap-off fill-current w-8 h-8 lg:w-10 lg:h-10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -97,7 +97,7 @@ const Navbar = () => {
 
           {/* moon icon */}
           <svg
-            className="swap-on fill-current  w-6 h-6 lg:w-10 lg:h-10"
+            className="swap-on fill-current  w-8 h-8 lg:w-10 lg:h-10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -110,22 +110,22 @@ const Navbar = () => {
           user&&<div className="tooltip tooltip-bottom tooltip-success" data-tip={user?.displayName}>
           <div
             className=
-              " w-6 lg:w-12 lg:h-12 rounded-full" 
+              " w-10 h-10 lg:w-14 lg:h-14 rounded-full" 
             
           >
             <img
-              className=" rounded-full w-6 h-6 lg:w-14 lg:h-12 "
+              className=" rounded-full w-10 h-10 lg:w-14 lg:h-14 "
               src={user?.photoURL||'https://tse3.mm.bing.net/th?id=OIP.HHVUf3TYqncgpJXyCMmxyAHaHa&pid=Api&P=0&h=220'}
             />
           </div>
         </div>
         }
         {
-          user?  <button onClick={handleLogOut} className=" bg-[#30336b] rounded-full px-2 lg:px-5 text-base lg:text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">
+          user?  <button onClick={handleLogOut} className=" bg-[#30336b] rounded-full px-2 lg:px-5 text-sm lg:text-lg font-semibold lg:font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">
           Log Out
         </button>:
         <Link to={"/login"}>
-          <button className=" bg-[#30336b] rounded-full px-2 lg:px-5 text-base lg:text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">
+          <button className=" bg-[#30336b] rounded-full px-2 lg:px-5 text-sm lg:text-lg font-bold text-yellow-500 flex justify-center items-center h-10 hover:bg-slate-100 ">
             Log In
           </button>
         </Link>

@@ -8,7 +8,7 @@ const Footer = () => {
 
       <aside>
        
-       <h1 className="btn btn-ghost text-lg lg:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-red-300 to-slate-500 animate-none mx-auto lg:mx-0 w-full">Land Navigator</h1>
+       <h1 className="btn btn-ghost text-lg lg:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-[#800080] to-slate-500 animate-none mx-auto lg:mx-0 w-full">Land Navigator</h1>
        <p>All rights Reserved || by Land Navigator</p>
       </aside>
       <nav className=" max-w-[200px] lg:w-full ">
